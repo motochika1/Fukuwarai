@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/face"
+        android:layout_width="391dp"
+        android:layout_height="672dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.141"
+        app:srcCompat="@drawable/hyottokoface" />
+
+    <ImageView
+        android:id="@+id/nose_image"
+        android:layout_width="110dp"
+        android:layout_height="89dp"
+        app:layout_constraintBottom_toBottomOf="@id/face"
+        app:layout_constraintEnd_toEndOf="@id/face"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="@id/face"
+        app:layout_constraintTop_toTopOf="@id/face"
+        app:layout_constraintVertical_bias="0.518"
+        app:srcCompat="@drawable/hyottokonose" />
+
+    <ImageView
+        android:id="@+id/rightEye_image"
+        android:layout_width="95dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@id/face"
+        app:layout_constraintEnd_toStartOf="@+id/leftEye_image"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="@id/face"
+        app:layout_constraintTop_toTopOf="@id/face"
+        app:layout_constraintVertical_bias="0.423"
+        app:srcCompat="@drawable/hyottokoeye" />
+
+    <ImageView
+        android:id="@+id/leftEye_image"
+        android:layout_width="95dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
+        app:layout_constraintBottom_toBottomOf="@id/face"
+        app:layout_constraintEnd_toEndOf="@id/face"
+        app:layout_constraintTop_toTopOf="@id/face"
+        app:layout_constraintVertical_bias="0.423"
+        app:srcCompat="@drawable/hyottokoeye" />
+
+    <ImageView
+        android:id="@+id/mouth_image"
+        android:layout_width="166dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="@id/face"
+        app:layout_constraintEnd_toEndOf="@id/face"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="@id/face"
+        app:layout_constraintTop_toBottomOf="@+id/nose_image"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/hyottokomouth" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947">
+
+        <Button
+            android:id="@+id/changeFace_button"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/frame_style_of_buttons"
+            android:text="変える"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/open_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.963" />
+
+        <Button
+            android:id="@+id/open_button"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/frame_style_of_buttons"
+            android:text="公開"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/face"
+            app:layout_constraintTop_toTopOf="@id/face"
+            app:layout_constraintVertical_bias="0.96"
+            tools:layout_editor_absoluteX="233dp" />
+
+        <Button
+            android:id="@+id/defo_button"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/frame_style_of_buttons"
+            android:text="元の位置"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/open_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.961" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/frame_style_of_back_button"
+        android:text="元の状態"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/eyebrows"
+        android:layout_width="224dp"
+        android:layout_height="54dp"
+        app:layout_constraintBottom_toBottomOf="@id/face"
+        app:layout_constraintEnd_toEndOf="@id/face"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="@id/face"
+        app:layout_constraintTop_toTopOf="@id/face"
+        app:layout_constraintVertical_bias="0.351"
+        app:srcCompat="@drawable/eyebrows" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
