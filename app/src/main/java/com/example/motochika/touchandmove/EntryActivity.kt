@@ -6,7 +6,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_entry.*
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 
-class EntryActivity : AppCompatActivity() {
+class YEntryActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
